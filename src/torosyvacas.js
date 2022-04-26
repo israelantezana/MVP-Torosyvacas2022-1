@@ -8,8 +8,12 @@ class TorosYVacas {
       return "Ganaste!";
     }
     for (var i = 0; i < this.codigoSecreto.length; i++) {
-      if (this.codigoSecreto.includes(intento[i])) {
-        respuesta += "*";
+      if (this.codigoSecreto[i] === intento[i]) {
+        respuesta += "!";
+      } else {
+        if (this.codigoSecreto.includes(intento[i])) {
+          respuesta += "*";
+        }
       }
     }
     return respuesta;
