@@ -2,7 +2,7 @@ import fs from "fs";
 describe("Toros y Vacas UI", () => {
   beforeAll(() => {
     document.body.innerHTML = fs.readFileSync("index.html", "utf8");
-    require("./presenter.js");
+    require("./mvp.js");
   });
 
   it("deberia mostrar el titulo del juego", () => {
@@ -36,7 +36,6 @@ describe("Toros y Vacas UI", () => {
 
   function verificarResultado(cadenaResultante) {
     const resultado = document.querySelector("#resultado-div");
-    console.log(resultado.innerHTML);
 
     expect(resultado.innerHTML).toEqual(cadenaResultante);
   }
